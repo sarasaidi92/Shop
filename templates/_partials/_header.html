@@ -20,7 +20,7 @@
                     <!-- ***** Menu Start ***** -->
                     <ul class="nav">
                         <li
-                                {% if request.path == '/' %}
+                                {% if '/' in request.path %}
                                     class="scroll-to-section" class="active"
                                 {% else %}
                                     class="scroll-to-section"
@@ -35,7 +35,7 @@
                             <a href="javascript:;">Pages</a>
                             <ul>
                                 <li
-                                        {% if request.path == '/about/' %}
+                                        {% if '/about/' in request.path  %}
                                             class="scroll-to-section" class="active"
                                         {% else %}
                                             class="scroll-to-section"
@@ -43,7 +43,7 @@
 
                                 ><a href="{% url 'about' %}">About Us</a></li>
                                 <li><a href="{% url 'products' %}">Products</a></li>
-                                <li><a href="single-product.html">Single Product</a></li>
+                                <li><a href="{% url 'single_product' %}">Single Product</a></li>
                                 <li><a href="contact.html">Contact Us</a></li>
                             </ul>
                         </li>
