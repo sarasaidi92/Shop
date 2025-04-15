@@ -10,19 +10,23 @@ class Basic(models.Model):
     email = models.EmailField(blank=True)
     phone = models.CharField(max_length=20, blank=True)
 
-    men = 'men'
-    women = 'women'
-    kids = 'kids'
+    title_shopping = models.CharField(max_length=50, blank=True)
+    men = models.CharField(max_length=50, blank=True)
+    women = models.CharField(max_length=50, blank=True)
+    kids = models.CharField(max_length=50, blank=True)
 
-    shop_choices = (
-        (men, 'men'),
-        (women, 'women'),
-        (kids, 'kids'),
-    )
+    useful_links = models.CharField(max_length=50, blank=True)
+    homepage = models.CharField(max_length=50, blank=True)
+    about = models.CharField(max_length=50, blank=True)
+    help = models.CharField(max_length=50, blank=True)
+    contact = models.CharField(max_length=50, blank=True)
 
-    category = models.CharField(max_length=100, choices= shop_choices , blank=True)
-    useful_links = models.CharField(max_length=100, blank=True)
-    information = models.CharField(max_length=100, blank=True)
+    information = models.CharField(max_length=50, blank=True)
+    help_info = models.CharField(max_length=50, blank=True)
+    faq = models.CharField(max_length=50, blank=True)
+    shipping = models.CharField(max_length=50, blank=True)
+    tracking = models.CharField(max_length=50, blank=True)
+
 
     facebook = models.TextField(blank=True)
     twitter = models.TextField(blank=True)
